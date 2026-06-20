@@ -2,6 +2,7 @@ streamlit
 pandas
 scikit-learn
 numpy
+matplotlib
 shap
 streamlit-shap
 fpdf
