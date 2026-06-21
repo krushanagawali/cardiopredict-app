@@ -16,8 +16,31 @@ st.set_page_config(
 )
 
 # Custom CSS injection for enterprise medical product styling
-st.markdown("<style>.main-header { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; } .sub-header { font-size: 1.1rem; color: #666; margin-bottom: 2rem; } .metric-card { border-radius: 8px; padding: 15px; margin-bottom: 15px; }</style>", unsafe_html=True)
+# --- 1. Page Configuration & Theme Tweaks ---
+st.set_page_config(
+    page_title="CardioPredict Enterprise | Clinical Decision Support",
+    page_icon="🫀",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
+def inject_custom_css():
+    st.markdown("""
+        <style>
+        .main-header { 
+            font-size: 2.2rem !important; 
+            font-weight: 700 !important; 
+            margin-bottom: 0.5rem !important; 
+        }
+        .sub-header { 
+            font-size: 1.1rem !important; 
+            color: #666 !important; 
+            margin-bottom: 2rem !important; 
+        }
+        </style>
+    """, unsafe_html=True)
+
+inject_custom_css()
 # --- 2. Sidebar Navigation & Compliance Panel ---
 st.sidebar.markdown("## 🫀 CardioPredict v4.0")
 st.sidebar.caption("Enterprise Clinical Decision Support System")
