@@ -16,13 +16,7 @@ st.set_page_config(
 )
 
 # Custom CSS injection for enterprise medical product styling
-st.markdown("""
-    <style>
-    .main-header { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .sub-header { font-size: 1.1rem; color: #666; margin-bottom: 2rem; }
-    .metric-card { border-radius: 8px; padding: 15px; margin-bottom: 15px; }
-    </style>
-""", unsafe_html=True)
+st.markdown("<style>.main-header { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; } .sub-header { font-size: 1.1rem; color: #666; margin-bottom: 2rem; } .metric-card { border-radius: 8px; padding: 15px; margin-bottom: 15px; }</style>", unsafe_html=True)
 
 # --- 2. Sidebar Navigation & Compliance Panel ---
 st.sidebar.markdown("## 🫀 CardioPredict v4.0")
