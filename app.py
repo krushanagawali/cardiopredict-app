@@ -282,4 +282,4 @@ elif app_mode == "Batch Record Analytics":
                     file_name="Evaluated_Clinical_Manifest.csv",
                     mime="text/csv",
                     use_container_width=True
-    )
+                )
