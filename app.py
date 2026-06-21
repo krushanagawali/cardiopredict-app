@@ -281,8 +281,8 @@ elif app_mode == "Batch Record Analytics":
                     data=csv_payload,
                     file_name="Evaluated_Clinical_Manifest.csv",
                     mime="text/csv",
-                    use_container_width=True
-    )                               columns=([f'f{i}' for i in range(10)]) 
+                    use_container_width=True )                             
+        columns=[f'f{i}' for i in range(10)]
         y_dummy = np.random.randint(0, 2, size=10)
         model.fit(X_dummy, y_dummy)
         features = list(X_dummy.columns)
