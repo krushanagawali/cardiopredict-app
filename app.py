@@ -9,10 +9,10 @@ import base64
 import datetime
 
 # --- 1. System Setup & Security ---
-st.set_page_config(page_title="CardioPredict UI", layout="wide")
+st.set_page_config(page_title="Heart disease Prediction UI", layout="wide")
 
 # Strict Zero-Database Architecture Notice
-st.sidebar.title("🫀 CardioPredict System")
+st.sidebar.title("🫀 Heart disease Prediction System")
 st.sidebar.markdown("---")
 st.sidebar.info("🔒 **Zero-Database Architecture**\n\nAll patient data is processed in volatile memory (RAM) and instantly destroyed after inference. No records are persistently stored.")
 
@@ -36,7 +36,7 @@ def create_pdf(patient_data, probability, risk_level):
     
     # Header
     pdf.set_font("Arial", 'B', 16)
-    pdf.cell(200, 10, txt="CardioPredict Clinical Diagnostics Report", ln=True, align='C')
+    pdf.cell(200, 10, txt="Heart disease Prediction Clinical Diagnostics Report", ln=True, align='C')
     pdf.set_font("Arial", 'I', 11)
     pdf.cell(200, 8, txt="Attending: Dr. Gawali Krushana Devidas | Akola Cardiology Center", ln=True, align='C')
     pdf.cell(200, 8, txt=f"Date: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", ln=True, align='C')
@@ -75,7 +75,7 @@ def create_pdf(patient_data, probability, risk_level):
 if app_mode == "Single Patient Inference":
     st.title("Single Patient Diagnostic Tool")
     
-    st.header("Patient Vitals")
+    st.header("Patient Info")
     col1, col2 = st.columns(2)
 
     with col1:
