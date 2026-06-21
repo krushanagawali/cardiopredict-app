@@ -16,14 +16,6 @@ st.set_page_config(
 )
 
 # Custom CSS injection for enterprise medical product styling
-# --- 1. Page Configuration & Theme Tweaks ---
-st.set_page_config(
-    page_title="CardioPredict Enterprise | Clinical Decision Support",
-    page_icon="🫀",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
 def inject_custom_css():
     st.markdown("""
         <style>
